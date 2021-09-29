@@ -1,7 +1,7 @@
 {
-  "name": "gulp-project",
+  "name": "LifeProject",
   "version": "1.0.0",
-  "description": "First Gulp Project",
+  "description": "LifeProject",
   "devDependencies": {
     "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
