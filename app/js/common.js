@@ -13,10 +13,10 @@ $(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "../mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+			alert("Спасибо!");
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");

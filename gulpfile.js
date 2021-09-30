@@ -14,7 +14,7 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		// online: false, // Work offline without internet connection
-		// tunnel: true, tunnel: 'projectname', // Demonstration page: http://projectname.localtunnel.me
+		// tunnel: true, tunnel: 'lifeproject', // Demonstration page: http://projectname.localtunnel.me
 	})
 });
 function bsReload(done) { browserSync.reload(); done() };

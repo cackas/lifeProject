@@ -69,13 +69,19 @@
 			</div>
 			<div class="front__right">
 				<form class="form fl clm">
+					<input type="hidden" name="project_name" value="Life Project">
+					<input type="hidden" name="admin_email" value="vannigga@yandex.ru">
+					<input type="hidden" name="form_subject" value="message">
 					<div class="input-wrap fl row">
-						<input name="name" type="text" placeholder="Ваше имя">
-						<input name="phone" type="tel" placeholder="Ваш номер телефона">
+						<input class="input--text" name="name" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё]{1,}">
+						<input class="input--text" name="phone" type="tel" placeholder="Ваш номер телефона" required pattern="+[0-9]{1,}">
 					</div>
-					<textarea name="message" id="mess" cols="30" rows="10">Напишите ваше сообщение</textarea>
-					<input type="checkbox" name="agree" id="agree">
-					<a href="#" class="btn btn--write">Отправить</a>
+					<textarea class="input--textarea" name="message" id="mess" rows="10" placeholder="Напишите ваше сообщение"></textarea>
+					<div class="checkbox-wrap fl row">
+						<input class="input--checkbox" type="checkbox" name="agree" id="agree" required>
+						<label for="agree">Я прочитал(а) <a href="#">Пользовательское соглашение</a> и даю согласие<br>на обработку персональных данных.</label>
+					</div>
+					<input class="btn btn--write" type="submit" value="Отправить">
 				</form>
 			</div>
 		</div>
