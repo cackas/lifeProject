@@ -1,8 +1,9 @@
 @import "bourbon"
 @import "vars.sass"
-
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
+@import "app/libs/slick-carousel/slick/slick"
+@import "app/libs/slick-carousel/slick/slick-theme"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -28,7 +29,144 @@ body textarea:required:valid
 	color: #666
 
 //Custom Styles Here
+.info
+	padding: 13.8vw 16.6vw 13.8vw 29.8vw
+	background-image: url(../img/bg-about.png)
+	background-repeat: no-repeat
+	background-size: 30.5vw 40.97vw
+	background-position: -2.77vw bottom
+	position: relative
+.info-wrap
+	padding: 1.38vw 2vw 1.38vw 0
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		width: 27.7vw
+		height: 10.4vw
+		border-top: .41vw solid $accent
+		border-right: .41vw solid $accent
+	&::after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		display: block
+		width: 27.7vw
+		height: 10.4vw
+		border-bottom: .41vw solid $accent
+.info__title
+	font-family: 'Montserrat'
+	font-size: 3.33vw
+	line-height: 3.88vw
+	font-weight: 600
+	color: $accent
+	margin-bottom: 1.38vw
+.info__text
+	font-family: 'Montserrat'
+	font-size: 1.38vw
+	line-height: 1.8vw
+	color: $accent
+.calibri
+	position: absolute
+	top: -5.2vw
+	right: 0
+	width: 21.7vw
+.history-block
+	padding: 4.55vw 15.9vw 5.34vw
+	background-image: url(../img/bg-history.png)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+.history__title
+	font-family: 'Montserrat Alternates'
+	font-weight: 600
+	color: #fff
+	font-size: 3.33vw
+	line-height: 3.88vw
+	margin-bottom: 2vw
+.slide
+	width: 100%
+	height: 38.19vw
+	iframe
+		height: 100%
+		border: none
+.history__carousel
+	margin-bottom: 2.91vw
+.carousel__nav
+	justify-content: space-between
+	align-items: center
+.arrow
+	width: 3.5vw
+	cursor: pointer
+.dots--history
+	padding: 0
+	margin: 0
+	justify-content: space-between
+	align-items: center
+	li
+		display: block
+		width: 10px
+		height: 10px
+		border-radius: 5px
+		border: 2px solid rgba(#fff,.5)
+		margin-right: .69vw
+		&:last-child
+			margin-right: 0
+		&.slick-active
+			border: 2px solid #fff
+			background-color: #fff
+		&::marker
+			color: transparent
+		button
+			display: none
 
-
+.dots--images
+	padding: 0
+	margin: 0
+	justify-content: space-between
+	align-items: center
+	li
+		display: block
+		width: 10px
+		height: 10px
+		border-radius: 5px
+		border: 2px solid rgba($accent,.5)
+		margin-right: .69vw
+		&:last-child
+			margin-right: 0
+		&.slick-active
+			border: 2px solid $accent
+			background-color: $accent
+		&::marker
+			color: transparent
+		button
+			display: none
+.images-block
+	background-color: #FCF3FF
+	padding-top: 8.33vw
+	padding-bottom: 9.1vw
+	position: relative
+.images__title
+	font-family: 'Montserrat Alternates'
+	font-weight: 600
+	color: $accent
+	font-size: 3.33vw
+	line-height: 3.88vw
+	margin-bottom: 2vw
+.images__carousel
+	width: 100%
+	justify-content: space-between
+	align-items: center
+.slide--images
+	width: 26.3vw
+	padding: .35vw .7vw
+.plant
+	position: absolute
+	right: 0
+	top: -7.7vw
+	width: 15.7vw
 //ALWAYS END
 @import "media"
