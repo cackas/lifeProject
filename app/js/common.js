@@ -32,7 +32,18 @@ $(function() {
 		nextArrow: $('.carousel__nav--history').find('.arrow.arrow--right--video'),
 		appendDots: $('.dots-wrap--history'),
 		dots: true,
-		dotsClass: 'dots--history fl row'
+		dotsClass: 'dots--history fl row',
+		responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        arrows: false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 	});
 	$('.images__carousel').slick({
 		appendArrows: $('.carousel__nav--images'),
@@ -42,7 +53,19 @@ $(function() {
 		dots: true,
 		rows: 2,
 		slidesPerRow: 3,
-		dotsClass: 'dots--images fl row'
+		dotsClass: 'dots--images fl row',
+		responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+		slidesPerRow: 2,
+        arrows: false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 	});
 
 });
