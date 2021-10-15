@@ -41,20 +41,7 @@
 </head>
 
 <body>
-
 	<header>
-		<div class="nav-panel fl row block">
-			<a href="#" class="logo-wrap logo--header"><img class="logo logo--white img--full" src="img/logo-white.png" alt=""></a>
-			<div class="nav-wrap fl row">
-				<div class="nav fl row">
-					<a href="#" class="link">О нас</a>
-					<a href="#" class="link">Истории</a>
-					<a href="#" class="link">Фото</a>
-				</div>
-				<button class="cmn-toggle-switch cmn-toggle-switch__htx"><span>toggle menu</span></button>
-				<a href="#" class="btn btn--write">Написать нам</a>
-			</div>
-		</div>
 		<div class="block front fl row">
 			<div class="front__left fl clm">
 				<div class="logo--clr-wrap">
@@ -67,6 +54,7 @@
 				<div class="front__cursiv">Если вы хотите узнать об<br class="none">
 					эффективном методе решения<br>
 					проблемы, напишите нам.</div>
+				<button class="cmn-toggle-switch cmn-toggle-switch__htx btn-switch--mobile"><span>toggle menu</span></button>
 			</div>
 			<div class="front__right">
 				<form class="form fl clm">
@@ -87,14 +75,14 @@
 			</div>
 		</div>
 	</header>
-		<div class="info">
+		<div class="info" id="info">
 			<div class="info-wrap">
 				<div class="info__title">Информация о нас</div>
 				<div class="info__text">Мы - Международное общественное объединение «Право на жизнь», отвечая на вызов наркотической и алкогольной зависимости, предлагаем: амбулаторную и стационарную Христоцентричную реабилитацию, консультирование и сопровождение родственников зависимых. Также, предотвращая вовлечение подростков и молодёжи, проводим профилактику химической зависимости в учебных заведениях.</div>
 			</div>
 			<div class="calibri"><img class="img--full" src="img/calibri.png" alt="calibri"></div>
 		</div>
-		<div class="history-block">
+		<div class="history-block" id="history">
 			<div class="history-wrap">
 				<div class="history__title">Реальные истории бывших<br class="none">зависимых</div>
 				<div class="history__carousel">
@@ -118,7 +106,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="images-block block">
+		<div class="images-block block" id="images">
 			<div class="images__title">Жизнь в трезвости</div>
 			<div class="carousel--images-wrap carousel--images-wrap--desctop">
 				<div class="images__carousel fl row">
@@ -232,6 +220,27 @@
 				</a>
 			</div>
 		</footer>
+		
+	<div class="nav-panel fl row block">
+		<a href="#" class="logo-wrap logo--header"><img class="logo logo--white img--full" src="img/logo-white.png" alt=""></a>
+		<div class="nav-wrap fl row">
+			<div class="nav fl row">
+				<a href="#info" class="link">О нас</a>
+				<a href="#history" class="link">Истории</a>
+				<a href="#images" class="link">Фото</a>
+			</div>
+			<button class="cmn-toggle-switch cmn-toggle-switch__htx"><span>toggle menu</span></button>
+			<a href="#" class="btn btn--write">Написать нам</a>
+		</div>
+		<div class="menu--ad fl clm hidden">
+			<div class="nav fl row">
+				<a href="#info" class="link">О нас</a>
+				<a href="#history" class="link">Истории</a>
+				<a href="#images" class="link">Фото</a>
+			</div>
+			<a href="#" class="btn btn--write">Написать нам</a>
+		</div>
+	</div>
 	<div class="hidden"></div>
 
 	<!--[if lt IE 9]>

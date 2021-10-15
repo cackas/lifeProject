@@ -97,6 +97,41 @@ $(function() {
 	});
 	}
 	$('.cmn-toggle-switch').on('click', function() {
-		$('.menu-wrap').fadeToggle();
+		$('.menu--ad').toggleClass('hidden');
+		$('body').toggleClass('scrolled');
+		$('.nav-wrap .btn').toggleClass('hidden');
+		if(!$('.logo-wrap').hasClass('visible')){
+			$('.logo-wrap').toggleClass('visible');
+		} else {
+			$('.logo-wrap').toggleClass('visible');
+		}
 	});
+	$('.menu--ad .link').on('click', function() {
+		$('.menu--ad').toggleClass('hidden');
+		$('body').toggleClass('scrolled');
+		if($('.cmn-toggle-switch').hasClass('active')){
+			$('.cmn-toggle-switch').removeClass('active');
+		} else {
+			$('.logo-wrap').addClass('active');
+		};
+		$('.nav-wrap .btn').toggleClass('hidden');
+		if(!$('.logo-wrap').hasClass('visible')){
+			$('.logo-wrap').toggleClass('visible');
+		} else {
+			$('.logo-wrap').toggleClass('visible');
+		}
+	})
+	//скролл
+	$(window).bind('scroll',function(){// Используем обработчик по скроллу
+		var ScrollPos = $(this).scrollTop(), // Определяем позицию скролла
+			HeaderHeight = $('header').height(); // Определяем высоту шапки
+			
+		if(ScrollPos>HeaderHeight) { // Если позиция скролла больше высоты шапки, т.е. ниже шапки, то..
+		  $('.nav-panel').addClass('fixed'); // Добавляем класс для меню
+		  // Фикс, т.к. контент уходит выше, ибо менюшка "ушла"
+		  
+		} else { // Если меньше, то
+			$('.nav-panel').removeClass('fixed'); // удаляем фикс
+		}
+	  });
 });
