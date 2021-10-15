@@ -10,6 +10,9 @@
 	.nav-panel
 		padding-bottom: 2.6vw
 		padding-top: 2.6vw
+	.nav-wrap
+		width: 100%
+		justify-content: flex-end
 	.nav
 		display: none
 	.logo--header
@@ -45,7 +48,7 @@
 		font-size: 2.6vw
 		line-height: 3.38vw
 	.input--text:first-child
-		margin-right: none
+		margin-right: 0
 	.input-wrap
 		justify-content: space-between
 		margin-bottom: 2.6vw
@@ -66,6 +69,7 @@
 	.input--checkbox+label::after
 		width: 1.6vw
 		height: .8vw
+		transform: translate(.5vw,-75%) rotate(-45deg)
 	.front
 		padding-bottom: 3.67vw
 	.calibri,.plant
@@ -124,6 +128,8 @@
 		span
 			font-size: 3.125vw
 			line-height: 3.9vw
+	.cmn-toggle-switch
+		display: block		
 /* Medium Devices, sktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -152,8 +158,140 @@
 		-o-animation: none !important
 		-ms-animation: none !important
 		animation: none !important
-
-
+	.logo--header
+		display: none
+	.nav-wrap
+		flex-direction: row-reverse !important
+		justify-content: space-between
+	.block
+		padding: 0 4.4vw
+	.nav-panel
+		padding-top: 3.6vw
+		padding-bottom: 4.4vw
+	.cmn-toggle-switch
+		margin-right: 4.4vw
+		width: 45px
+		height: 45px
+	.cmn-toggle-switch span:before 
+		top: -14px
+	.cmn-toggle-switch span:after 
+		bottom: -14px
+	.btn
+		padding: 3.33vw 5.55vw
+	.btn.btn--write
+		font-size: 3.88vw
+		line-height: 8.33vw
+	.front.block
+		padding: 0
+	.front__left
+		padding: 3.6vw 4.4vw 21.6vw
+	.logo--clr-wrap
+		width: 43.3vw
+		margin-bottom: 24.4vw
+	.front__title
+		font-size: 8.3vw
+		line-height: 10vw
+		margin-bottom: 5.5vw
+	.front__cursiv
+		font-size: 4.4vw
+		line-height: 6.1vw
+	.front__right
+		padding: 11.1vw 4.4vw
+	.input-wrap
+		flex-direction: column !important
+		margin-bottom: 5.5vw
+	.input--text
+		width: 100%
+		margin-bottom: 5.5vw
+		font-size: 4.4vw
+		line-height: 6.1vw
+		padding: 4.16vw 5.5vw
+		&:last-child
+			margin-bottom: 0
+	.input--textarea
+		margin-bottom: 8.3vw
+		font-size: 4.4vw
+		line-height: 6.1vw
+		padding: 4.16vw 5.5vw
+	.checkbox-wrap
+		margin-bottom: 8.33vw
+	.input--checkbox+label
+		font-size: 3.33vw
+		line-height: 5vw
+		padding-left: 12.2vw
+	.input--checkbox+label::before
+		width: 5vw
+		height: 5vw
+	.input--checkbox+label::after
+		width: 3.2vw
+		height: 1.6vw
+		transform: translate(.9vw,-75%) rotate(-45deg)
+	form .btn.btn--write
+		padding: 3.33vw
+		font-size: 5vw
+		line-height: 8.33vw
+	.info
+		padding: 11.1vw 4.44vw
+	.info__title,.history__title,.images__title
+		font-size: 8.33vw
+		line-height: 10vw
+		margin-bottom: 5.55vw
+	.info__text
+		font-size: 4.4vw
+		line-height: 6.11vw
+	.info-wrap
+		padding: 8.3vw 0
+	.info-wrap::before
+		width: 43.3vw
+		border-top: 4px solid #422079
+		border-right: none
+	.info-wrap::after
+		width: 43.3vw
+		border-bottom: 4px solid #422079
+	.history-block
+		padding: 11.1vw 4.44vw
+	.history__title,.images__title
+		margin-bottom: 8.33vw	
+	.history__carousel
+		margin-bottom: 8.33vw !important
+	.dots--history li,.dots--images li
+		width: 20px
+		height: 20px
+		border-radius: 12.5px
+		margin-right: 2.77vw
+	.slide
+		height: 51.11vw
+	.images-block
+		padding-top: 11.1vw
+		padding-bottom: 11.1vw
+	.slide--images
+		padding: 0
+	.carousel--images-wrap--desctop
+		display: none
+	.carousel--images-wrap--mobile
+		display: inherit
+	footer
+		padding: 11.1vw 4.44vw
+	.logo--footer
+		width: 77.8vw
+		margin-bottom: 13.9vw
+	.social-wrap
+		margin-bottom: 13.9vw
+	.soc
+		width: 13.3vw
+		margin-right: 8.33vw
+		&:last-child
+			margin-right: 0
+	.phones-wrap .footer__name
+		font-size: 4.4vw
+		line-height: 6.11vw
+		margin-bottom: 4.2vw
+	.footer__phone img
+		width: 13.3vw
+		margin-right: 4.2vw
+	.footer__phone span
+		font-size: 6.67vw
+		line-height: 8.33vw
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/

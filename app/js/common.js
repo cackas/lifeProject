@@ -45,11 +45,11 @@ $(function() {
     // instead of a settings object
   ]
 	});
-	$('.images__carousel').slick({
+	$('.carousel--images-wrap--desctop .images__carousel').slick({
 		appendArrows: $('.carousel__nav--images'),
-		prevArrow: $('.carousel__nav--images').find('.arrow.arrow--left--video'),
-		nextArrow: $('.carousel__nav--images').find('.arrow.arrow--right--video'),
-		appendDots: $('.dots-wrap--images'),
+		prevArrow: $('.carousel--images-wrap--desctop .carousel__nav--images').find('.arrow.arrow--left--video'),
+		nextArrow: $('.carousel--images-wrap--desctop .carousel__nav--images').find('.arrow.arrow--right--video'),
+		appendDots: $('.dots-wrap--desk'),
 		dots: true,
 		rows: 2,
 		slidesPerRow: 3,
@@ -58,14 +58,45 @@ $(function() {
     {
       breakpoint: 1200,
       settings: {
+		rows: 2,
 		slidesPerRow: 2,
         arrows: false
       }
+	},
+	{
+		breakpoint: 768,
+		settings: "unslick"
     }
+	
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
-  ]
+  	]
 	});
+	$('.carousel--images-wrap--mobile .images__carousel').slick({
+		appendArrows: $('.carousel__nav--images'),
+		prevArrow: $('.carousel--images-wrap--mobile .carousel__nav--images').find('.arrow.arrow--left--video'),
+		nextArrow: $('.carousel--images-wrap--mobile .carousel__nav--images').find('.arrow.arrow--right--video'),
+		appendDots: $('.dots-wrap--mobile'),
+		dots: true,
+		dotsClass: 'dots--images fl row',
+		arrows: false
+	});
+//Кнопка адаптивного меню
+	var toggles = document.querySelectorAll(".cmn-toggle-switch");
 
+	for (var i = toggles.length - 1; i >= 0; i--) {
+	var toggle = toggles[i];
+	toggleHandler(toggle);
+	};
+
+	function toggleHandler(toggle) {
+	toggle.addEventListener( "click", function(e) {
+		e.preventDefault();
+		(this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+	});
+	}
+	$('.cmn-toggle-switch').on('click', function() {
+		$('.menu-wrap').fadeToggle();
+	});
 });
